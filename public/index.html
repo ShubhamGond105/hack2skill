@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bharat Chunav Sahayak — India Election Assistant</title>
+  <meta name="description" content="AI-powered multilingual assistant helping Indian citizens understand elections, voter registration, EVMs, and constitutional rights. Supports 8 languages." />
+  <meta property="og:title" content="Bharat Chunav Sahayak — India Election Assistant" />
+  <meta property="og:description" content="Free AI assistant for Indian election knowledge in 8 languages." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#000080" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇳</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="flag-bar">
+        <div class="f-saffron"></div>
+        <div class="f-white"><div class="ashoka"></div></div>
+        <div class="f-green"></div>
+      </div>
+      <div class="header-content">
+        <div class="header-text">
+          <h1>🇮🇳 Bharat Chunav Sahayak</h1>
+          <p>India Election Process Assistant — Free &amp; AI Powered</p>
+        </div>
+        <div class="header-actions">
+          <button id="clear-btn" class="icon-btn" title="Clear chat">🗑</button>
+          <button id="theme-btn" class="icon-btn" title="Toggle dark mode">🌙</button>
+          <div class="lang-select">
+            <select id="lang">
+              <option value="English">English</option>
+              <option value="Hindi">हिन्दी</option>
+              <option value="Tamil">தமிழ்</option>
+              <option value="Telugu">తెలుగు</option>
+              <option value="Bengali">বাংলা</option>
+              <option value="Marathi">मराठी</option>
+              <option value="Gujarati">ગુજરાતી</option>
+              <option value="Kannada">ಕನ್ನಡ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mode-tabs">
+      <button class="tab active" data-mode="general">🏛 General Elections</button>
+      <button class="tab" data-mode="state">🗺 State Elections</button>
+      <button class="tab" data-mode="voter">🗳 Voter Rights</button>
+      <button class="tab" data-mode="evm">⚙ EVM &amp; VVPAT</button>
+      <button class="tab" data-mode="quiz">📝 Quiz Mode</button>
+    </div>
+
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat"><span class="stat-num">543</span><span class="stat-lbl">Lok Sabha seats</span></div>
+      <div class="stat"><span class="stat-num">96 Cr</span><span class="stat-lbl">Registered voters</span></div>
+      <div class="stat"><span class="stat-num">28</span><span class="stat-lbl">States</span></div>
+      <div class="stat"><span class="stat-num">8</span><span class="stat-lbl">Union territories</span></div>
+      <div class="stat"><span class="stat-num">2029</span><span class="stat-lbl">Next Lok Sabha</span></div>
+    </div>
+
+    <div class="pills" id="pill-box"></div>
+
+    <div class="chat-area" id="chat">
+      <div class="msg bot msg-enter">
+        <div class="av bot-av">ECI</div>
+        <div class="bubble bot-bubble">
+          🙏 Jai Hind! I am your Indian Election Process Assistant. Ask me anything about Lok Sabha &amp; Rajya Sabha elections, voter registration (EPIC), Model Code of Conduct, EVMs, candidate nominations, and more. Select a topic above or type your question below!
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="q" placeholder="Ask about Indian elections..." maxlength="1000" />
+      <button id="send-btn">Send ↗</button>
+    </div>
+  </div>
+
+  <script src="prompts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
